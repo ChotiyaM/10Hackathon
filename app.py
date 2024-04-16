@@ -25,5 +25,10 @@ def send_message():
     bot_response = get_bot_response(user_message)
     return jsonify({'response': bot_response})
 
+@app.route("/chat", methods=['POST'])
+def chat():
+    test_response = "This is a test response"
+    return ({'data': test_response})
+
 #if __name__ == "__main__":
-app.run()
+app.run(debug=True)
